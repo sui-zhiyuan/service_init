@@ -1,0 +1,11 @@
+services:
+
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - 50206-50207:50206-50207
+    volumes: 
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      /var/log/nginx/error.log
+      /var/log/nginx/access.log
